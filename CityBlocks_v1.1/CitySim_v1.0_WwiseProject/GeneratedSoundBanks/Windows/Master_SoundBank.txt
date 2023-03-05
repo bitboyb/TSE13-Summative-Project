@@ -24,4 +24,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	3949330844	Play_Block_Office			\Default Work Unit\Play_Block_Office	
 	4069151121	Stop_Block_Power			\Default Work Unit\Stop_Block_Power	
 	4170772026	Stop_Block_Shop			\Default Work Unit\Stop_Block_Shop	
+	4258653052	TEST_EVENT			\Default Work Unit\TEST_EVENT	
 

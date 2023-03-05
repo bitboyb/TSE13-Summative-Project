@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -46,6 +46,7 @@
 				<Event Id="3847328251" Name="Stop_ExampleCity" ObjectPath="\Events\Default Work Unit\Stop_ExampleCity" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2418344944" Name="Stop_Tree" ObjectPath="\Events\Default Work Unit\Stop_Tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4258653052" Name="TEST_EVENT" ObjectPath="\Events\Default Work Unit\TEST_EVENT" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

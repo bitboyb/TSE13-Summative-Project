@@ -38,6 +38,7 @@ namespace AK
         static const AkUniqueID STOP_EXAMPLECITY = 3847328251U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_TREE = 2418344944U;
+        static const AkUniqueID TEST_EVENT = 4258653052U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

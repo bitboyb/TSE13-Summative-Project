@@ -27,6 +27,7 @@
 						<ObjectRef Name="Play_Block_Shop" ID="{9BA7F7D5-1192-4957-AA9F-6EF306CC1409}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Music" ID="{39231C4A-C441-49C5-8DE3-6513FA0443A4}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Ambience" ID="{EB57513D-2627-4A3B-B5A6-7A0BF22EBD81}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TEST_EVENT" ID="{4458E991-5DFE-4A8B-AF07-C8BD477AA008}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Block_Power_Propeler" ID="{D0C18509-44C8-4C49-83AE-B49A891FBD57}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Music" ID="{B69501EA-5440-4C92-AB87-24CD2619A944}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Block_Office" ID="{A60D9BF8-D3BB-4E23-9D03-14141D4F0AE4}" WorkUnitID="{0CEFD850-E770-4994-B764-1CCA54FF87D4}" Filter="7" Origin="Manual"/>

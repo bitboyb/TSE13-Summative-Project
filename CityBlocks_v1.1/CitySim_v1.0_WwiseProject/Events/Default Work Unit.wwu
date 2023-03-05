@@ -28,6 +28,7 @@
 				<Event Name="Stop_Block_Shop" ID="{F708A841-0E3E-4391-958D-75A6D098802A}"/>
 				<Event Name="Stop_Tree" ID="{7C1801C5-3FE5-4297-A1B8-013CA5152011}"/>
 				<Event Name="Stop_Eiffel_Tower" ID="{12410BDB-D0AA-4246-9970-CB23E7A892C9}"/>
+				<Event Name="TEST_EVENT" ID="{4458E991-5DFE-4A8B-AF07-C8BD477AA008}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
