@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D5027592-19EB-46EC-AC38-EEAD873839DB}" SchemaVersion="94">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{D5027592-19EB-46EC-AC38-EEAD873839DB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="MusicLoop1" ID="{0A1BA230-A8FA-4764-946F-8B0CB2A97CC7}" ShortID="534912159">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="MusicLoop1" ID="{236B8759-C989-4B74-931D-9BB023A66B6E}" ShortID="241511680">
+							<Language>SFX</Language>
+							<AudioFile>MusicLoop1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="MusicLoop1" ID="{236B8759-C989-4B74-931D-9BB023A66B6E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

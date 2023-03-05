@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
+	478568288	Play_Block_CityHall			\Default Work Unit\Play_Block_CityHall	
+	661781820	Stop_Block_Apartment			\Default Work Unit\Stop_Block_Apartment	
+	870522975	Stop_Eiffel_Tower			\Default Work Unit\Stop_Eiffel_Tower	
+	1497459184	Play_GameStart			\Default Work Unit\Play_GameStart	
+	1788156355	Play_Block_Power_Propeler			\Default Work Unit\Play_Block_Power_Propeler	
+	1858226889	Stop_Block_Power_Propeler			\Default Work Unit\Stop_Block_Power_Propeler	
+	2024731561	Play_Eiffel_Tower			\Default Work Unit\Play_Eiffel_Tower	
+	2126453631	Play_Block_Power			\Default Work Unit\Play_Block_Power	
+	2292956854	Play_Block_Apartment			\Default Work Unit\Play_Block_Apartment	
+	2405925199	Play_Notification			\Default Work Unit\Play_Notification	
+	2418344944	Stop_Tree			\Default Work Unit\Stop_Tree	
+	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
+	2546847810	Play_Block_Elevator			\Default Work Unit\Play_Block_Elevator	
+	2551336358	Stop_Block_Office			\Default Work Unit\Stop_Block_Office	
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3364399272	Stop_Block_Elevator			\Default Work Unit\Stop_Block_Elevator	
+	3492314494	Play_Tree			\Default Work Unit\Play_Tree	
+	3723240680	Play_Block_Shop			\Default Work Unit\Play_Block_Shop	
+	3770632381	Play_ExampleCity			\Default Work Unit\Play_ExampleCity	
+	3847328251	Stop_ExampleCity			\Default Work Unit\Stop_ExampleCity	
+	3949330844	Play_Block_Office			\Default Work Unit\Play_Block_Office	
+	4069151121	Stop_Block_Power			\Default Work Unit\Stop_Block_Power	
+	4170772026	Stop_Block_Shop			\Default Work Unit\Stop_Block_Shop	
+

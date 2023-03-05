@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>G:\tse-games\CityBlocks_Wwise\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2469504869" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Master_SoundBank</ObjectPath>
+			<ShortName>Master_SoundBank</ShortName>
+			<Path>Master_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2292956854" Name="Play_Block_Apartment" ObjectPath="\Events\Default Work Unit\Play_Block_Apartment" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="478568288" Name="Play_Block_CityHall" ObjectPath="\Events\Default Work Unit\Play_Block_CityHall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2546847810" Name="Play_Block_Elevator" ObjectPath="\Events\Default Work Unit\Play_Block_Elevator" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3949330844" Name="Play_Block_Office" ObjectPath="\Events\Default Work Unit\Play_Block_Office" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2126453631" Name="Play_Block_Power" ObjectPath="\Events\Default Work Unit\Play_Block_Power" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1788156355" Name="Play_Block_Power_Propeler" ObjectPath="\Events\Default Work Unit\Play_Block_Power_Propeler" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3723240680" Name="Play_Block_Shop" ObjectPath="\Events\Default Work Unit\Play_Block_Shop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2024731561" Name="Play_Eiffel_Tower" ObjectPath="\Events\Default Work Unit\Play_Eiffel_Tower" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3770632381" Name="Play_ExampleCity" ObjectPath="\Events\Default Work Unit\Play_ExampleCity" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1497459184" Name="Play_GameStart" ObjectPath="\Events\Default Work Unit\Play_GameStart" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2405925199" Name="Play_Notification" ObjectPath="\Events\Default Work Unit\Play_Notification" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3492314494" Name="Play_Tree" ObjectPath="\Events\Default Work Unit\Play_Tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="661781820" Name="Stop_Block_Apartment" ObjectPath="\Events\Default Work Unit\Stop_Block_Apartment" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3364399272" Name="Stop_Block_Elevator" ObjectPath="\Events\Default Work Unit\Stop_Block_Elevator" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2551336358" Name="Stop_Block_Office" ObjectPath="\Events\Default Work Unit\Stop_Block_Office" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4069151121" Name="Stop_Block_Power" ObjectPath="\Events\Default Work Unit\Stop_Block_Power" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1858226889" Name="Stop_Block_Power_Propeler" ObjectPath="\Events\Default Work Unit\Stop_Block_Power_Propeler" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4170772026" Name="Stop_Block_Shop" ObjectPath="\Events\Default Work Unit\Stop_Block_Shop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="870522975" Name="Stop_Eiffel_Tower" ObjectPath="\Events\Default Work Unit\Stop_Eiffel_Tower" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3847328251" Name="Stop_ExampleCity" ObjectPath="\Events\Default Work Unit\Stop_ExampleCity" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2418344944" Name="Stop_Tree" ObjectPath="\Events\Default Work Unit\Stop_Tree" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
