@@ -1,5 +1,19 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	207908541	Time_Of_Day			\Default Work Unit\Time_Of_Day	
+
+State	ID	Name	State Group			Notes
+	0	None	Time_Of_Day			
+	390531879	Afternoon	Time_Of_Day			
+	1011622525	Night	Time_Of_Day			
+	1924633667	Morning	Time_Of_Day			
+	2905060079	Evening	Time_Of_Day			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

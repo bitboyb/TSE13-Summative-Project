@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CANYOUSEEME = 3099511213U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BLOCK_APARTMENT = 2292956854U;
         static const AkUniqueID PLAY_BLOCK_CITYHALL = 478568288U;
@@ -38,12 +39,29 @@ namespace AK
         static const AkUniqueID STOP_EXAMPLECITY = 3847328251U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_TREE = 2418344944U;
-        static const AkUniqueID TEST_EVENT = 4258653052U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace TIME_OF_DAY
+        {
+            static const AkUniqueID GROUP = 207908541U;
+
+            namespace STATE
+            {
+                static const AkUniqueID AFTERNOON = 390531879U;
+                static const AkUniqueID EVENING = 2905060079U;
+                static const AkUniqueID MORNING = 1924633667U;
+                static const AkUniqueID NIGHT = 1011622525U;
+            } // namespace STATE
+        } // namespace TIME_OF_DAY
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BLOCK_COUNTER = 4174326217U;
+        static const AkUniqueID CURRENT_TIME = 3863175764U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -54,7 +72,11 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

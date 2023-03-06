@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2551336358	Stop_Block_Office			\Default Work Unit\Stop_Block_Office	
 	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3099511213	CANYOUSEEME			\Default Work Unit\CANYOUSEEME	
 	3364399272	Stop_Block_Elevator			\Default Work Unit\Stop_Block_Elevator	
 	3492314494	Play_Tree			\Default Work Unit\Play_Tree	
 	3723240680	Play_Block_Shop			\Default Work Unit\Play_Block_Shop	
@@ -24,5 +25,4 @@ Event	ID	Name			Wwise Object Path	Notes
 	3949330844	Play_Block_Office			\Default Work Unit\Play_Block_Office	
 	4069151121	Stop_Block_Power			\Default Work Unit\Stop_Block_Power	
 	4170772026	Stop_Block_Shop			\Default Work Unit\Stop_Block_Shop	
-	4258653052	TEST_EVENT			\Default Work Unit\TEST_EVENT	
 

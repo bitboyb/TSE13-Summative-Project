@@ -16,7 +16,7 @@ public class GameSettings : Singleton<GameSettings>
     private float blockCount;
     public AK.Wwise.RTPC wwiseBlockCounter;
 
-    private List<GameObject> createdBuildings;
+    [HideInInspector] public List<GameObject> createdBuildings;
 
     public enum BuildingType
     {
@@ -51,7 +51,7 @@ public class GameSettings : Singleton<GameSettings>
         ChangeStatus(status);
         blockCount = 0;
         wwiseBlockCounter.SetGlobalValue(0);
-    }
+	}
 
     void Update()
     {
@@ -111,7 +111,7 @@ public class GameSettings : Singleton<GameSettings>
 		building.GetComponent<Animator>().SetTrigger("Show");
 		notifications.AdvanceDialoque(building, buildingNumber);
         createdBuildings.Add(building);
-    }
+	}
 
     public void DestroyBuilding(GameObject building)
     {

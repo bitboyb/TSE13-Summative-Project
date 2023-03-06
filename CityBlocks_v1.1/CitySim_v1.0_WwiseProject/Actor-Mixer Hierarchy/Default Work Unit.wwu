@@ -3,25 +3,70 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{D5027592-19EB-46EC-AC38-EEAD873839DB}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="MusicLoop1" ID="{0A1BA230-A8FA-4764-946F-8B0CB2A97CC7}" ShortID="534912159">
+				<ActorMixer Name="AM_Music" ID="{AE395BEF-6BB7-4BF6-9BB6-53DD4FFBC9D5}" ShortID="721675796">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+							<ObjectRef Name="Music" ID="{B20D17F9-2E52-410A-82D8-D1734008EA8C}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="MusicLoop1" ID="{236B8759-C989-4B74-931D-9BB023A66B6E}" ShortID="241511680">
-							<Language>SFX</Language>
-							<AudioFile>MusicLoop1.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="MusicLoop1" ID="{0A1BA230-A8FA-4764-946F-8B0CB2A97CC7}" ShortID="534912159">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MusicLoop1" ID="{236B8759-C989-4B74-931D-9BB023A66B6E}" ShortID="241511680">
+									<Language>SFX</Language>
+									<AudioFile>MusicLoop1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MusicLoop1" ID="{236B8759-C989-4B74-931D-9BB023A66B6E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="MusicLoop1" ID="{236B8759-C989-4B74-931D-9BB023A66B6E}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</ActorMixer>
+				<ActorMixer Name="AM_Ambience" ID="{193CD494-D8E0-4695-9564-B1B7758F58AB}" ShortID="689986274">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="AM_UI" ID="{19FA8CD0-D5A4-4106-B8BB-B419925C701B}" ShortID="427772203">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UI" ID="{202EED7B-4AC4-4028-AD6B-DD9D70463D46}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="AM_SFX" ID="{67799595-622B-46C7-82CA-279C51C6F085}" ShortID="1031683848">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
