@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/SettingsBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -81,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678026672175</updated>
       <workItem from="1678026674898" duration="10543000" />
-      <workItem from="1678055639203" duration="13793000" />
+      <workItem from="1678055639203" duration="15255000" />
     </task>
     <servers />
   </component>

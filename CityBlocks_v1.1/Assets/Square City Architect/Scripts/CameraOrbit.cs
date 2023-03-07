@@ -28,12 +28,10 @@ public class CameraOrbit : MonoBehaviour
 	[SerializeField] private bool Gamepad = false;
 	[SerializeField] private bool Showcase = true;
 	private Vector2 ScaledDeltaSpeed;
-	private WwiseSliderBehaviour _wwiseSliderBehaviour;
 
 	void Start()
 	{
 		t = transform;
-		_wwiseSliderBehaviour = GameObject.Find("VolumeSliders").GetComponent<WwiseSliderBehaviour>();
 	}
 
 	/// <summary>
@@ -46,9 +44,6 @@ public class CameraOrbit : MonoBehaviour
 		{
 			RotateAround(Vector3.up, 0.5f);
 		}
-
-		if (_wwiseSliderBehaviour.IsSettingsEnabled())
-			return;
 
 		if (Mouse)
 		{
