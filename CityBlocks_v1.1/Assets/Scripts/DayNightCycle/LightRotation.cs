@@ -1,5 +1,6 @@
 ﻿using System;
 using Audio;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,14 +14,19 @@ namespace DayNightCycle
         private float elapsedTime = 0f;
 
         private TimeOfDayBehaviour _timeOfDayBehaviour;
+        private SettingsBehaviour _settingsBehaviour;
 
         private void Start()
         {
             _timeOfDayBehaviour = GameObject.Find("GameManager").GetComponent<TimeOfDayBehaviour>();
+            _settingsBehaviour = GameObject.Find("SettingsButton").GetComponentInChildren<SettingsBehaviour>();
         }
         
         private void Update()
         {
+            if (_settingsBehaviour.IsSettingsEnabled())
+                return;
+            
             if (currentAngle == 0)
             {
                 _timeOfDayBehaviour.AddTime();

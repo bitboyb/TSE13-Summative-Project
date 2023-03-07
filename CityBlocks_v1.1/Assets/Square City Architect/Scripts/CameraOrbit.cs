@@ -28,9 +28,11 @@ public class CameraOrbit : MonoBehaviour
 	[SerializeField] private bool Gamepad = false;
 	[SerializeField] private bool Showcase = true;
 	private Vector2 ScaledDeltaSpeed;
+	private SettingsBehaviour _settingsBehaviour;
 
 	void Start()
 	{
+		_settingsBehaviour = GameObject.Find("SettingsButton").GetComponentInChildren<SettingsBehaviour>();
 		t = transform;
 	}
 
@@ -44,6 +46,9 @@ public class CameraOrbit : MonoBehaviour
 		{
 			RotateAround(Vector3.up, 0.5f);
 		}
+		
+		if(_settingsBehaviour.IsSettingsEnabled())
+			return;
 
 		if (Mouse)
 		{
