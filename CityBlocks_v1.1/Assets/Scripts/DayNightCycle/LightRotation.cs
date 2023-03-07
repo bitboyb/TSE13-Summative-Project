@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,14 +13,19 @@ namespace DayNightCycle
         private float elapsedTime = 0f;
 
         private TimeOfDayBehaviour _timeOfDayBehaviour;
+        private WwiseSliderBehaviour _wwiseSliderBehaviour;
 
         private void Start()
         {
             _timeOfDayBehaviour = GameObject.Find("GameManager").GetComponent<TimeOfDayBehaviour>();
+            _wwiseSliderBehaviour = GameObject.Find("VolumeSliders").GetComponent<WwiseSliderBehaviour>();
         }
         
         private void Update()
         {
+            if (_wwiseSliderBehaviour.IsSettingsEnabled())
+                return;
+            
             if (currentAngle == 0)
             {
                 _timeOfDayBehaviour.AddTime();

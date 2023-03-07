@@ -41,7 +41,7 @@ namespace DayNightCycle
 
         private void SetTimeOfDayState()
         {
-            SetTimeOfDayRtpc();
+            SetTimeOfDayRTPC();
             
             switch (_timeOfDay)
             {
@@ -64,7 +64,7 @@ namespace DayNightCycle
             }
         }
 
-        private void SetTimeOfDayRtpc()
+        private void SetTimeOfDayRTPC()
         {
             timeOfDayRTPC.SetGlobalValue(_timeOfDay);
         }
