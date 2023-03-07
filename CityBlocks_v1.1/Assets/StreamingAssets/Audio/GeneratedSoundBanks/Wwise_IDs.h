@@ -57,33 +57,10 @@ namespace AK
 
     } // namespace STATES
 
-    namespace SWITCHES
-    {
-        namespace BUILDING_TYPE
-        {
-            static const AkUniqueID GROUP = 2032085148U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID APARTMENT = 4154495109U;
-                static const AkUniqueID CITYHALL = 291480329U;
-                static const AkUniqueID ELEVATOR = 3705378287U;
-                static const AkUniqueID OFFICE = 1547173777U;
-                static const AkUniqueID POWER = 2391494160U;
-                static const AkUniqueID SHOP = 251412225U;
-            } // namespace SWITCH
-        } // namespace BUILDING_TYPE
-
-    } // namespace SWITCHES
-
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BLOCK_COUNTER = 4174326217U;
         static const AkUniqueID CURRENT_TIME = 3863175764U;
-        static const AkUniqueID MASTER_VOLUME = 4179668880U;
-        static const AkUniqueID MUSIC_VOLUME = 1006694123U;
-        static const AkUniqueID SFX_VOLUME = 1564184899U;
-        static const AkUniqueID UI_VOLUME = 1719345792U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

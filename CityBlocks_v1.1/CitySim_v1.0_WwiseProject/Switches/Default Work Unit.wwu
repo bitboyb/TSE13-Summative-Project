@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{53987E09-1538-4560-B682-6A9946674B67}" SchemaVersion="94">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{53987E09-1538-4560-B682-6A9946674B67}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{53987E09-1538-4560-B682-6A9946674B67}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Building_Type" ID="{CD2AA9AB-7A64-4BE5-9EC9-A8A5457C8594}">
+					<ChildrenList>
+						<Switch Name="CityHall" ID="{58B7AC1D-6D2C-4B1F-9703-84B4718CFD6E}"/>
+						<Switch Name="Apartment" ID="{424F733F-111D-451F-83E7-630F94CADAAC}"/>
+						<Switch Name="Elevator" ID="{08867C6F-F28D-490B-A883-E2DB4676D76A}"/>
+						<Switch Name="Office" ID="{4ED1E194-A6D0-4F47-BCCA-19CD246C7E86}"/>
+						<Switch Name="Power" ID="{CA1AEB20-FB2A-45A3-AB3A-D4FD575D3D0F}"/>
+						<Switch Name="Shop" ID="{57BF6025-6A7A-4D3A-92D4-551A43B4291B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

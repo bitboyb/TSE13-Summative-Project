@@ -25,6 +25,3 @@ Event	ID	Name			Wwise Object Path	Notes
 	4069151121	Stop_Block_Power			\Default Work Unit\Stop_Block_Power	
 	4170772026	Stop_Block_Shop			\Default Work Unit\Stop_Block_Shop	
 
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	241511680	MC_Music_GameLoop	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\MusicLoop1_3EBA1927.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_Music\MC_Music_GameLoop		502369
-

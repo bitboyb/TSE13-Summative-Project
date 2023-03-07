@@ -13,7 +13,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="MusicLoop1" ID="{0A1BA230-A8FA-4764-946F-8B0CB2A97CC7}" ShortID="534912159">
+						<Sound Name="MC_Music_GameLoop" ID="{0A1BA230-A8FA-4764-946F-8B0CB2A97CC7}" ShortID="534912159">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 							</PropertyList>
