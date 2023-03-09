@@ -13,7 +13,7 @@ namespace DayNightCycle
         private int lastCount = 0;
         
         public float morningLightIntensity = 0f;
-        public float eveningLightIntensity = 1f;
+        public float eveningLightIntensity = 4f;
         
         private void Start()
         {
@@ -27,12 +27,12 @@ namespace DayNightCycle
             if (_gameSettings.createdBuildings.Count > lastCount)
             {
                 lastCount++;
-                ChangeShaderIllumination();
+                //ChangeShaderIllumination();
             }
                 
             if(_lastTimeOfDayState != _timeOfDayBehaviour.GetTimeOfDayState())
             {
-                ChangeShaderIllumination();
+                //ChangeShaderIllumination();
             }
         }
 
@@ -44,7 +44,18 @@ namespace DayNightCycle
 
             foreach (var building in _gameSettings.createdBuildings)
             {
-                var buildingChild = building.transform.GetChild(0);
+                var buildingRenderer = building.GetComponent<Renderer>();
+                
+                if (building.name.StartsWith("Shop"))
+                {
+                    buildingRenderer = building.transform.GetChild(3).GetComponent<Renderer>();
+                }
+                else
+                {
+                    buildingRenderer = building.transform.GetChild(0).GetComponent<Renderer>();
+                }
+
+
                 var buildingShaderProperty = "_IlluminationPower";
                 var buildingShaderValue = 0f;
 
@@ -57,7 +68,7 @@ namespace DayNightCycle
                     buildingShaderValue = eveningLightIntensity;    
                 }
 
-                buildingChild.GetComponent<Renderer>().material.SetFloat(buildingShaderProperty, buildingShaderValue);
+                buildingRenderer.material.SetFloat(buildingShaderProperty, buildingShaderValue);
             }
         }
     }

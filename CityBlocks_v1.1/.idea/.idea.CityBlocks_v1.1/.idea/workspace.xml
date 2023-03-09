@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74014f22-4ad4-4432-815a-639ae920cce8" name="Changes" comment="" />
+    <list default="true" id="74014f22-4ad4-4432-815a-639ae920cce8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBlocks_v1.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBlocks_v1.1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Square City Architect/Shaders/BuildingsVertexColor.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Square City Architect/Shaders/BuildingsVertexColor.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/.cache/Mac/SFX/SBStat/{6A9E12AC-C602-4828-9A5C-6F63EDE81A0D}.stat" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/.cache/Mac/SFX/SBStat/{6A9E12AC-C602-4828-9A5C-6F63EDE81A0D}.stat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/.cache/Windows/SFX/SBStat/{6A9E12AC-C602-4828-9A5C-6F63EDE81A0D}.stat" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/.cache/Windows/SFX/SBStat/{6A9E12AC-C602-4828-9A5C-6F63EDE81A0D}.stat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Init.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Init.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Init.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Master_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Master_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Master_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/Master_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Init.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Init.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Init.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Master_SoundBank.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Master_SoundBank.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Master_SoundBank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/Master_SoundBank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/IncrementalSoundBankData.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CitySim_v1.0_WwiseProject/IncrementalSoundBankData.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/LayoutElementEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Editor/InputField/ContentValidation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/SettingsBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -62,10 +82,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25376">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="25376" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -82,7 +102,9 @@
       <option name="presentableId" value="Default" />
       <updated>1678026672175</updated>
       <workItem from="1678026674898" duration="10543000" />
-      <workItem from="1678055639203" duration="16905000" />
+      <workItem from="1678055639203" duration="17557000" />
+      <workItem from="1678378176139" duration="3140000" />
+      <workItem from="1678386231766" duration="833000" />
     </task>
     <servers />
   </component>
