@@ -10,8 +10,8 @@ public class CameraOrbit : MonoBehaviour
 	[SerializeField] private AnimationCurve fadeDeltaRotation;
 	[SerializeField] private Vector3 mapOrigin;
 	[SerializeField] private float speed = 0.04f;
-	private float frontalRotation = 22.5f;
-	private float topRotation = 90.0f;
+	[SerializeField] private float frontalRotation = 22.5f;
+	[SerializeField] float topRotation = 90.0f;
 	private Transform t;
 	private bool easeOut = false;
 	private float endDelta;

@@ -40,7 +40,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="UI" ID="{202EED7B-4AC4-4028-AD6B-DD9D70463D46}">
+						<Bus Name="AB_UI" ID="{202EED7B-4AC4-4028-AD6B-DD9D70463D46}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<RTPCList>
@@ -70,9 +70,16 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="24"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="AB_UI_Notifications" ID="{5A1A3F82-09D2-4A2F-98C9-B3F9C1BFBACD}"/>
+								<Bus Name="AB_UI_Time" ID="{F0884488-FDA1-4D7C-8E8B-E06EC01D63B9}"/>
+								<Bus Name="AB_UI_GUI" ID="{7ED0EE48-AD5A-416A-B2F3-FCCED856056E}"/>
+							</ChildrenList>
 						</Bus>
-						<Bus Name="Music" ID="{B20D17F9-2E52-410A-82D8-D1734008EA8C}">
+						<Bus Name="AB_Music" ID="{B20D17F9-2E52-410A-82D8-D1734008EA8C}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<RTPCList>
@@ -102,9 +109,22 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="AB_Music_Master" ID="{B7A41812-82EC-41DE-B215-15B3395C4E1C}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
 						</Bus>
-						<Bus Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}">
+						<Bus Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<RTPCList>
@@ -134,9 +154,16 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="AB_Ambience_Master" ID="{D7024D26-3AAE-4AF7-8D57-8027B1E01235}"/>
+								<Bus Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}"/>
+								<Bus Name="AB_Ambience_Trees" ID="{C04FC4AD-3886-420B-A825-EB98055EDD44}"/>
+							</ChildrenList>
 						</Bus>
-						<Bus Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}">
+						<Bus Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<RTPCList>
@@ -166,7 +193,12 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="AB_SoundEffects_Buildings" ID="{B1530903-F67D-4C18-9280-227F8878D32D}"/>
+							</ChildrenList>
 						</Bus>
 					</ChildrenList>
 				</Bus>

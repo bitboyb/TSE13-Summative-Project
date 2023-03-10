@@ -65,7 +65,7 @@
 						<Action Name="" ID="{AE260E0F-6A9F-45DB-9FDC-3217568312F4}" ShortID="852424600">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RC_SoundEffects_Tree_OnLoop" ID="{99207C70-C433-4997-A029-347138717430}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
+									<ObjectRef Name="RC_Ambience_Tree_OnLoop" ID="{99207C70-C433-4997-A029-347138717430}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -81,7 +81,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RC_SoundEffects_Tree_OnLoop" ID="{99207C70-C433-4997-A029-347138717430}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
+									<ObjectRef Name="RC_Ambience_Tree_OnLoop" ID="{99207C70-C433-4997-A029-347138717430}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

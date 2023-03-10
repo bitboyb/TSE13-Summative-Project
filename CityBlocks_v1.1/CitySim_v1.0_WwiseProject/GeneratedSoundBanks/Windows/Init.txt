@@ -5,11 +5,19 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4179668880	Master_Volume			\Default Work Unit\Volumes\Master_Volume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
-	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
-	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	62799486	AB_SoundEffects			\Default Work Unit\Master Audio Bus\AB_SoundEffects	
+	953039440	AB_UI_Notifications			\Default Work Unit\Master Audio Bus\AB_UI\AB_UI_Notifications	
+	992645177	AB_Ambience_Trees			\Default Work Unit\Master Audio Bus\AB_Ambience\AB_Ambience_Trees	
+	2293551212	AB_Music			\Default Work Unit\Master Audio Bus\AB_Music	
+	2728188161	AB_Ambience_Buildings			\Default Work Unit\Master Audio Bus\AB_Ambience\AB_Ambience_Buildings	
+	3095538948	AB_Ambience_Master			\Default Work Unit\Master Audio Bus\AB_Ambience\AB_Ambience_Master	
+	3108147029	AB_UI_GUI			\Default Work Unit\Master Audio Bus\AB_UI\AB_UI_GUI	
+	3242230264	AB_SoundEffects_Buildings			\Default Work Unit\Master Audio Bus\AB_SoundEffects\AB_SoundEffects_Buildings	
+	3278399183	AB_UI_Time			\Default Work Unit\Master Audio Bus\AB_UI\AB_UI_Time	
+	3344007037	AB_Music_Master			\Default Work Unit\Master Audio Bus\AB_Music\AB_Music_Master	
+	3516201167	AB_Ambience			\Default Work Unit\Master Audio Bus\AB_Ambience	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4254849545	AB_UI			\Default Work Unit\Master Audio Bus\AB_UI	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

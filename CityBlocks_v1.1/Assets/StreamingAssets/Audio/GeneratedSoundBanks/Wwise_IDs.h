@@ -79,11 +79,19 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID AB_AMBIENCE = 3516201167U;
+        static const AkUniqueID AB_AMBIENCE_BUILDINGS = 2728188161U;
+        static const AkUniqueID AB_AMBIENCE_MASTER = 3095538948U;
+        static const AkUniqueID AB_AMBIENCE_TREES = 992645177U;
+        static const AkUniqueID AB_MUSIC = 2293551212U;
+        static const AkUniqueID AB_MUSIC_MASTER = 3344007037U;
+        static const AkUniqueID AB_SOUNDEFFECTS = 62799486U;
+        static const AkUniqueID AB_SOUNDEFFECTS_BUILDINGS = 3242230264U;
+        static const AkUniqueID AB_UI = 4254849545U;
+        static const AkUniqueID AB_UI_GUI = 3108147029U;
+        static const AkUniqueID AB_UI_NOTIFICATIONS = 953039440U;
+        static const AkUniqueID AB_UI_TIME = 3278399183U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MUSIC = 3991942870U;
-        static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

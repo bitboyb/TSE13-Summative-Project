@@ -4,25 +4,30 @@
 		<WorkUnit Name="Default Work Unit" ID="{D5027592-19EB-46EC-AC38-EEAD873839DB}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="AM_Music" ID="{AE395BEF-6BB7-4BF6-9BB6-53DD4FFBC9D5}" ShortID="721675796">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Music" ID="{B20D17F9-2E52-410A-82D8-D1734008EA8C}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+							<ObjectRef Name="AB_Music" ID="{B20D17F9-2E52-410A-82D8-D1734008EA8C}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="MC_Music_GameLoop" ID="{0A1BA230-A8FA-4764-946F-8B0CB2A97CC7}" ShortID="534912159">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+									<ObjectRef Name="AB_Music_Master" ID="{B7A41812-82EC-41DE-B215-15B3395C4E1C}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -38,22 +43,29 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="AM_Ambience" ID="{193CD494-D8E0-4695-9564-B1B7758F58AB}" ShortID="689986274">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+							<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="BC_Ambience_MasterAmbience" ID="{1E207FB3-F904-4BD3-9CC4-56B303D65672}" ShortID="527503168">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+									<ObjectRef Name="AB_Ambience_Master" ID="{D7024D26-3AAE-4AF7-8D57-8027B1E01235}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -76,9 +88,22 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="a-slightly-windy-afternoon-in-rural-greece-26039" ID="{7F592459-93D1-47CA-843B-E215F6CF8DA2}" ShortID="231188284">
+													<PropertyList>
+														<Property Name="LoopEnd" Type="Real64" Value="50.0130874681934"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>a-slightly-windy-afternoon-in-rural-greece-26039.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="a-slightly-windy-afternoon-in-rural-greece-26039" ID="{7F592459-93D1-47CA-843B-E215F6CF8DA2}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Morning_MedPop" ID="{987476E2-20A6-4D88-ACA1-3FCB19F3191E}" ShortID="752283151">
 											<PropertyList>
@@ -89,9 +114,18 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="birdsong-at-dawn-lucca-52682" ID="{F1415A0B-2DEF-4CB3-BFE3-278B02F367D1}" ShortID="233754446">
+													<Language>SFX</Language>
+													<AudioFile>birdsong-at-dawn-lucca-52682.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="birdsong-at-dawn-lucca-52682" ID="{F1415A0B-2DEF-4CB3-BFE3-278B02F367D1}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Morning_HighPop" ID="{2026A10C-5DFF-4CC5-82EF-E78AEB2C43E3}" ShortID="398180582">
 											<PropertyList>
@@ -102,9 +136,22 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="the-country-sound-of-new-milks-in-high-peak-17103" ID="{B4726734-0CFA-4208-A9FD-291F6420C685}" ShortID="781779642">
+													<PropertyList>
+														<Property Name="LoopEnd" Type="Real64" Value="180.274140267176"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>the-country-sound-of-new-milks-in-high-peak-17103.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="the-country-sound-of-new-milks-in-high-peak-17103" ID="{B4726734-0CFA-4208-A9FD-291F6420C685}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<BlendTrackList>
@@ -155,7 +202,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -171,6 +218,19 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="lateafternoonsept12th2015smallmidwesttown-24870" ID="{16A956C0-A59D-495C-A52C-92D406FBEF6C}" ShortID="376966467">
+													<PropertyList>
+														<Property Name="LoopEnd" Type="Real64" Value="141.60141889313"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>lateafternoonsept12th2015smallmidwesttown-24870.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="lateafternoonsept12th2015smallmidwesttown-24870" ID="{16A956C0-A59D-495C-A52C-92D406FBEF6C}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Afternoon_MedPop" ID="{16D0CB89-5F84-4861-9C2B-86277989F5B9}" ShortID="409297446">
 											<PropertyList>
@@ -181,9 +241,23 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="road-7016" ID="{181870FA-95EC-46F4-9153-0AA4AB666B2E}" ShortID="208224049">
+													<PropertyList>
+														<Property Name="ChannelConfigOverride" Type="int64" Value="49410"/>
+														<Property Name="LoopEnd" Type="Real64" Value="107.246051844784"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>road-7016.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="road-7016" ID="{181870FA-95EC-46F4-9153-0AA4AB666B2E}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Afternoon_HighPop" ID="{2661E27A-32DF-465B-BB66-11FEFCE77DD5}" ShortID="54827404">
 											<PropertyList>
@@ -194,9 +268,23 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="highway-14475" ID="{DE04F822-0FD5-409E-8CEB-CE017182FE2B}" ShortID="168037456">
+													<PropertyList>
+														<Property Name="ChannelConfigOverride" Type="int64" Value="49410"/>
+														<Property Name="LoopEnd" Type="Real64" Value="118.838183206107"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>highway-14475.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="highway-14475" ID="{DE04F822-0FD5-409E-8CEB-CE017182FE2B}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<BlendTrackList>
@@ -247,7 +335,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -260,9 +348,18 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="nitgh-ambience-6710" ID="{F652305D-E992-4DE4-9225-BFDE4564BC53}" ShortID="395430298">
+													<Language>SFX</Language>
+													<AudioFile>nitgh-ambience-6710.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="nitgh-ambience-6710" ID="{F652305D-E992-4DE4-9225-BFDE4564BC53}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Evening_MedPop" ID="{375E87E6-63BD-426C-9ECB-0A6870D9BC0F}" ShortID="81337701">
 											<PropertyList>
@@ -273,9 +370,26 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="nitgh-ambience-6710" ID="{643B324F-4418-484B-B970-4E085CDD7A57}" ShortID="207414129">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+													</ReferenceList>
+													<Language>SFX</Language>
+													<AudioFile>nitgh-ambience-6710.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="395430298"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="nitgh-ambience-6710" ID="{643B324F-4418-484B-B970-4E085CDD7A57}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Evening_HighPop" ID="{FC0373C0-1817-4D3A-A9FF-3252F15AB927}" ShortID="833298012">
 											<PropertyList>
@@ -286,9 +400,22 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="city-terrace-night-16943" ID="{ED3F2BF2-C7C6-452C-ABAE-06FA63076974}" ShortID="603856354">
+													<PropertyList>
+														<Property Name="LoopEnd" Type="Real64" Value="165.542993320611"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>city-terrace-night-16943.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="city-terrace-night-16943" ID="{ED3F2BF2-C7C6-452C-ABAE-06FA63076974}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<BlendTrackList>
@@ -339,7 +466,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -352,9 +479,26 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="nitgh-ambience-6710" ID="{D0BA28AC-E793-48A1-BB0A-963A2652F029}" ShortID="344655731">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+													</ReferenceList>
+													<Language>SFX</Language>
+													<AudioFile>nitgh-ambience-6710.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="395430298"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="nitgh-ambience-6710" ID="{D0BA28AC-E793-48A1-BB0A-963A2652F029}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Night_MedPop" ID="{08CCEA7C-A515-44DF-9721-90FA01A2BB08}" ShortID="67982713">
 											<PropertyList>
@@ -365,9 +509,26 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="nitgh-ambience-6710" ID="{DC5CF8B0-B2CD-4BAE-96B2-765CF25651EA}" ShortID="993211318">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+													</ReferenceList>
+													<Language>SFX</Language>
+													<AudioFile>nitgh-ambience-6710.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="395430298"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="nitgh-ambience-6710" ID="{DC5CF8B0-B2CD-4BAE-96B2-765CF25651EA}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="SFX_Ambience_Night_HighPop" ID="{4936DFA3-74D7-445C-8018-DD5B02DF39FC}" ShortID="1040591925">
 											<PropertyList>
@@ -378,9 +539,21 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="nitgh-ambience-6710" ID="{88923529-5321-4837-A041-9A08CC34D1EE}" ShortID="995875610">
+													<Language>SFX</Language>
+													<AudioFile>nitgh-ambience-6710.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="395430298"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="nitgh-ambience-6710" ID="{88923529-5321-4837-A041-9A08CC34D1EE}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<BlendTrackList>
@@ -489,7 +662,20 @@
 						<SwitchContainer Name="SC_Ambience_Building_OnLoop" ID="{FDEEEC92-262D-4426-9627-FDFB02026C19}" ShortID="976497971">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -499,17 +685,14 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+									<ObjectRef Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="Building_Type" ID="{CD2AA9AB-7A64-4BE5-9EC9-A8A5457C8594}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="SFX_Ambience_Building_OnLoop_Apartment" ID="{EFAD3C43-FC46-4CB9-84F2-CE1E2E51B599}" ShortID="965204440">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
+								<BlendContainer Name="BC_Ambience_Building_OnLoop_Apartment" ID="{CCBC5175-1317-4603-A36A-65C7A77D2EA5}" ShortID="10436434">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
@@ -518,185 +701,878 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
-								</Sound>
-								<Sound Name="SFX_Ambience_Building_OnLoop_Shop" ID="{120ABD5C-E802-4CCD-BF4C-6924079B941D}" ShortID="2895180">
+									<ChildrenList>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Apartment_Night" ID="{4F3241AB-88BA-41CC-BAC3-A95D52D17B1B}" ShortID="832132385">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="1st-floor-apartment-hallway-neighbors-talking-59611" ID="{012A1C06-715E-4B67-8D85-0CD65C009AA9}" ShortID="966536679">
+													<Language>SFX</Language>
+													<AudioFile>1st-floor-apartment-hallway-neighbors-talking-59611.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="1st-floor-apartment-hallway-neighbors-talking-59611" ID="{012A1C06-715E-4B67-8D85-0CD65C009AA9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Apartment_Day" ID="{E33C3637-C0D3-4394-81D9-72CD3B56C680}" ShortID="838240476">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="indoor_-apartments_hall_noise-6840" ID="{B4B083C9-E07A-42F6-A6BD-F16083D5A432}" ShortID="857142918">
+													<Language>SFX</Language>
+													<AudioFile>indoor_-apartments_hall_noise-6840.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="indoor_-apartments_hall_noise-6840" ID="{B4B083C9-E07A-42F6-A6BD-F16083D5A432}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="BT_Time_Of_Day" ID="{60BDBDAD-5D05-452F-AE79-6E2410E617F2}" ShortID="512239585">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}" WorkUnitID="{9029996B-8D5D-4E88-A2BF-7ADD16EED72C}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Apartment_Night" ID="{4F3241AB-88BA-41CC-BAC3-A95D52D17B1B}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>9</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Apartment_Day" ID="{E33C3637-C0D3-4394-81D9-72CD3B56C680}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>8</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>17.25025</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Apartment_Night" ID="{4F3241AB-88BA-41CC-BAC3-A95D52D17B1B}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>16</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>23</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<BlendContainer Name="BC_Ambience_Building_OnLoop_Shop" ID="{C458EF25-1DB9-4A08-BA41-52FE3007FE16}" ShortID="469393266">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
-								</Sound>
-								<Sound Name="SFX_Ambience_Building_OnLoop_Office" ID="{79A20269-D118-43D4-B384-26AD184475B9}" ShortID="436352803">
+									<ChildrenList>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Shop_Night" ID="{C7064252-FFC7-4C64-8760-6AC6900A9F35}" ShortID="223752824">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Shop_Day" ID="{31BDBF39-2479-48B9-A789-165E367F3D80}" ShortID="316504330">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="BT_Time_Of_Day" ID="{5A54CDA1-DB11-47B0-AC05-E461E75057D8}" ShortID="54279783">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}" WorkUnitID="{9029996B-8D5D-4E88-A2BF-7ADD16EED72C}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Shop_Night" ID="{C7064252-FFC7-4C64-8760-6AC6900A9F35}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>9</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Shop_Day" ID="{31BDBF39-2479-48B9-A789-165E367F3D80}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>8</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>17</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Shop_Night" ID="{C7064252-FFC7-4C64-8760-6AC6900A9F35}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>16</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>23</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<BlendContainer Name="BC_Ambience_Building_OnLoop_Power" ID="{CC528256-57D6-4DE5-BA91-6DCEAFDFD59A}" ShortID="925335015">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
-								</Sound>
-								<Sound Name="SFX_Ambience_Building_OnLoop_Elevator" ID="{B10DD2C1-F3E6-45E8-8B80-1D461DFDA971}" ShortID="528987922">
+									<ChildrenList>
+										<SwitchContainer Name="SC_Ambient_Building_OnLoop_Power_Day" ID="{80D64660-34BB-4584-BF58-6FC87F52666A}" ShortID="942658604">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Ambient_Building_OnLoop_Power_Day_Bottom" ID="{04DF9031-E0DE-42DB-80A7-2F721D551B64}" ShortID="752347003">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+														</Reference>
+													</ReferenceList>
+												</Sound>
+												<Sound Name="SFX_Ambient_Building_OnLoop_Power_Day_Top" ID="{CA8767AD-56FB-4489-B381-C34E4A708642}" ShortID="111320959">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+														</Reference>
+													</ReferenceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Day_Bottom" ID="{04DF9031-E0DE-42DB-80A7-2F721D551B64}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Day_Top" ID="{CA8767AD-56FB-4489-B381-C34E4A708642}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Bottom" ID="{19B51B2C-C442-44A4-BADC-0DEB4D22B133}"/>
+														<ItemList>
+															<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Day_Bottom" ID="{04DF9031-E0DE-42DB-80A7-2F721D551B64}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Top" ID="{37BA0743-07CA-4F8D-A5AC-B80184EE4D4B}"/>
+														<ItemList>
+															<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Day_Top" ID="{CA8767AD-56FB-4489-B381-C34E4A708642}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Middle" ID="{BD223C81-E337-45FC-9D94-C8BD3279A6C7}"/>
+														<ItemList>
+															<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Day_Bottom" ID="{04DF9031-E0DE-42DB-80A7-2F721D551B64}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="SC_Ambient_Building_OnLoop_Power_Night" ID="{5B2152BE-C084-4076-AC69-E1B531026AEE}" ShortID="227928711">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Ambient_Building_OnLoop_Power_Night_Bottom" ID="{88092C57-C3E1-47AE-A039-B9129F75835D}" ShortID="938578914">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+														</Reference>
+													</ReferenceList>
+												</Sound>
+												<Sound Name="SFX_Ambient_Building_OnLoop_Power_Night_Top" ID="{D2B4312B-54A5-48E3-8965-4C8A9EBF4BFB}" ShortID="1013073349">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+														</Reference>
+													</ReferenceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Night_Top" ID="{D2B4312B-54A5-48E3-8965-4C8A9EBF4BFB}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Night_Bottom" ID="{88092C57-C3E1-47AE-A039-B9129F75835D}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Bottom" ID="{19B51B2C-C442-44A4-BADC-0DEB4D22B133}"/>
+														<ItemList>
+															<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Night_Bottom" ID="{88092C57-C3E1-47AE-A039-B9129F75835D}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Top" ID="{37BA0743-07CA-4F8D-A5AC-B80184EE4D4B}"/>
+														<ItemList>
+															<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Night_Top" ID="{D2B4312B-54A5-48E3-8965-4C8A9EBF4BFB}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Middle" ID="{BD223C81-E337-45FC-9D94-C8BD3279A6C7}"/>
+														<ItemList>
+															<ItemRef Name="SFX_Ambient_Building_OnLoop_Power_Night_Bottom" ID="{88092C57-C3E1-47AE-A039-B9129F75835D}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="BT_Time_Of_Day" ID="{92DFD600-AF20-4119-831D-4011DA23CF7D}" ShortID="6879591">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}" WorkUnitID="{9029996B-8D5D-4E88-A2BF-7ADD16EED72C}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="SC_Ambient_Building_OnLoop_Power_Night" ID="{5B2152BE-C084-4076-AC69-E1B531026AEE}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>9</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SC_Ambient_Building_OnLoop_Power_Day" ID="{80D64660-34BB-4584-BF58-6FC87F52666A}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>8</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>17</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SC_Ambient_Building_OnLoop_Power_Night" ID="{5B2152BE-C084-4076-AC69-E1B531026AEE}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>16</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>23</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<BlendContainer Name="BC_Ambience_Building_OnLoop_Elevator" ID="{CB51BC01-F083-465B-8349-2FBB320E16DE}" ShortID="942386798">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
-								</Sound>
-								<Sound Name="SFX_Ambience_Building_OnLoop_Power" ID="{6427FFAD-5B85-4F18-BF74-F84755232BA1}" ShortID="225760400">
+									<ChildrenList>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Elevator_Night" ID="{02CC9423-B7F2-4507-B633-33C6E3A11430}" ShortID="1011331704">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Elevator_Day" ID="{846E9E92-6F48-4CCE-8F9E-C4B1C73EC7C9}" ShortID="988229825">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="BT_Time_Of_Day" ID="{4464DC16-74CA-45E9-BB33-39C41C4D9839}" ShortID="486746718">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}" WorkUnitID="{9029996B-8D5D-4E88-A2BF-7ADD16EED72C}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Elevator_Night" ID="{02CC9423-B7F2-4507-B633-33C6E3A11430}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>9</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Elevator_Day" ID="{846E9E92-6F48-4CCE-8F9E-C4B1C73EC7C9}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>8</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>17</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Elevator_Night" ID="{02CC9423-B7F2-4507-B633-33C6E3A11430}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>16</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>23</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<BlendContainer Name="BC_Ambience_Building_OnLoop_CityHall" ID="{ACA11B3B-E4FE-4EC9-A5F5-0F4AA6E50420}" ShortID="329129883">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
-								</Sound>
-								<Sound Name="SFX_Ambience_Building_OnLoop_CityHall" ID="{996D6896-D1A7-45F5-A8D5-FFDD87507C6A}" ShortID="628271619">
+									<ChildrenList>
+										<Sound Name="SFX_Ambient_Building_OnLoop_CityHall_Night" ID="{0CFA19B7-16A8-483B-8424-6819FDA6181A}" ShortID="5418004">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Day" ID="{6C69573A-C84E-47CF-A841-F2B24CB11F43}" ShortID="221569057">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="BT_Time_Of_day" ID="{1F39CDEC-00F9-4D90-88AD-40E5920FA5C9}" ShortID="48105808">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}" WorkUnitID="{9029996B-8D5D-4E88-A2BF-7ADD16EED72C}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_CityHall_Night" ID="{0CFA19B7-16A8-483B-8424-6819FDA6181A}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>9</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Day" ID="{6C69573A-C84E-47CF-A841-F2B24CB11F43}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>8</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>17</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_CityHall_Night" ID="{0CFA19B7-16A8-483B-8424-6819FDA6181A}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>16</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>23</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<BlendContainer Name="BC_Ambience_Building_OnLoop_Office" ID="{49194030-14DD-4AF6-B2EC-2D786DB8882A}" ShortID="886168417">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+											<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 										</Reference>
 									</ReferenceList>
-								</Sound>
+									<ChildrenList>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Office_Night" ID="{36E9068D-AA89-4F08-AE3B-816A1AB86FC6}" ShortID="26300773">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+										<Sound Name="SFX_Ambient_Building_OnLoop_Office_Day" ID="{DD1716F9-5F85-4A03-8520-B00994DE282A}" ShortID="751984193">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building_Loop_Attenuation" ID="{6623FAE0-030D-442D-BB20-5B3C547E645F}" WorkUnitID="{C4DE349B-8E23-47F3-B5BE-382756D23B61}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="AB_Ambience" ID="{827493EC-B66B-49AA-8C5F-58647CBFFA24}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="office-ambience-6322" ID="{1D96C9E0-CCBA-4573-84D9-98F0214FDAA6}" ShortID="640086448">
+													<Language>SFX</Language>
+													<AudioFile>office-ambience-6322.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="office-ambience-6322" ID="{1D96C9E0-CCBA-4573-84D9-98F0214FDAA6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="BT_Time_Of_Day" ID="{780FE83D-B6DA-499E-9F35-967F0EEE0116}" ShortID="990788544">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}" WorkUnitID="{9029996B-8D5D-4E88-A2BF-7ADD16EED72C}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Office_Night" ID="{36E9068D-AA89-4F08-AE3B-816A1AB86FC6}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>9</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Office_Day" ID="{DD1716F9-5F85-4A03-8520-B00994DE282A}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>8</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>17</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="SFX_Ambient_Building_OnLoop_Office_Night" ID="{36E9068D-AA89-4F08-AE3B-816A1AB86FC6}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>16</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>23</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="SFX_Ambience_Building_OnLoop_Apartment" ID="{EFAD3C43-FC46-4CB9-84F2-CE1E2E51B599}"/>
+										<ItemRef Name="BC_Ambience_Building_OnLoop_Elevator" ID="{CB51BC01-F083-465B-8349-2FBB320E16DE}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="SFX_Ambience_Building_OnLoop_Shop" ID="{120ABD5C-E802-4CCD-BF4C-6924079B941D}"/>
+										<ItemRef Name="BC_Ambience_Building_OnLoop_Shop" ID="{C458EF25-1DB9-4A08-BA41-52FE3007FE16}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="SFX_Ambience_Building_OnLoop_Office" ID="{79A20269-D118-43D4-B384-26AD184475B9}"/>
+										<ItemRef Name="BC_Ambience_Building_OnLoop_Office" ID="{49194030-14DD-4AF6-B2EC-2D786DB8882A}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="SFX_Ambience_Building_OnLoop_CityHall" ID="{996D6896-D1A7-45F5-A8D5-FFDD87507C6A}"/>
+										<ItemRef Name="BC_Ambience_Building_OnLoop_CityHall" ID="{ACA11B3B-E4FE-4EC9-A5F5-0F4AA6E50420}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="SFX_Ambience_Building_OnLoop_Power" ID="{6427FFAD-5B85-4F18-BF74-F84755232BA1}"/>
+										<ItemRef Name="BC_Ambience_Building_OnLoop_Power" ID="{CC528256-57D6-4DE5-BA91-6DCEAFDFD59A}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="SFX_Ambience_Building_OnLoop_Elevator" ID="{B10DD2C1-F3E6-45E8-8B80-1D461DFDA971}"/>
+										<ItemRef Name="BC_Ambience_Building_OnLoop_Apartment" ID="{CCBC5175-1317-4603-A36A-65C7A77D2EA5}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="CityHall" ID="{58B7AC1D-6D2C-4B1F-9703-84B4718CFD6E}"/>
 										<ItemList>
-											<ItemRef Name="SFX_Ambience_Building_OnLoop_CityHall" ID="{996D6896-D1A7-45F5-A8D5-FFDD87507C6A}"/>
+											<ItemRef Name="BC_Ambience_Building_OnLoop_CityHall" ID="{ACA11B3B-E4FE-4EC9-A5F5-0F4AA6E50420}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Power" ID="{CA1AEB20-FB2A-45A3-AB3A-D4FD575D3D0F}"/>
 										<ItemList>
-											<ItemRef Name="SFX_Ambience_Building_OnLoop_Power" ID="{6427FFAD-5B85-4F18-BF74-F84755232BA1}"/>
+											<ItemRef Name="BC_Ambience_Building_OnLoop_Power" ID="{CC528256-57D6-4DE5-BA91-6DCEAFDFD59A}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Shop" ID="{57BF6025-6A7A-4D3A-92D4-551A43B4291B}"/>
 										<ItemList>
-											<ItemRef Name="SFX_Ambience_Building_OnLoop_Shop" ID="{120ABD5C-E802-4CCD-BF4C-6924079B941D}"/>
+											<ItemRef Name="BC_Ambience_Building_OnLoop_Shop" ID="{C458EF25-1DB9-4A08-BA41-52FE3007FE16}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Apartment" ID="{424F733F-111D-451F-83E7-630F94CADAAC}"/>
 										<ItemList>
-											<ItemRef Name="SFX_Ambience_Building_OnLoop_Apartment" ID="{EFAD3C43-FC46-4CB9-84F2-CE1E2E51B599}"/>
+											<ItemRef Name="BC_Ambience_Building_OnLoop_Apartment" ID="{CCBC5175-1317-4603-A36A-65C7A77D2EA5}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Elevator" ID="{08867C6F-F28D-490B-A883-E2DB4676D76A}"/>
 										<ItemList>
-											<ItemRef Name="SFX_Ambience_Building_OnLoop_Elevator" ID="{B10DD2C1-F3E6-45E8-8B80-1D461DFDA971}"/>
+											<ItemRef Name="BC_Ambience_Building_OnLoop_Elevator" ID="{CB51BC01-F083-465B-8349-2FBB320E16DE}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Office" ID="{4ED1E194-A6D0-4F47-BCCA-19CD246C7E86}"/>
 										<ItemList>
-											<ItemRef Name="SFX_Ambience_Building_OnLoop_Office" ID="{79A20269-D118-43D4-B384-26AD184475B9}"/>
+											<ItemRef Name="BC_Ambience_Building_OnLoop_Office" ID="{49194030-14DD-4AF6-B2EC-2D786DB8882A}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<ActorMixer Name="AM_Ambience_Tree" ID="{8ACC32FF-6D63-45BA-B092-1EB5D1BD52E5}" ShortID="202480264">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AB_Ambience_Trees" ID="{C04FC4AD-3886-420B-A825-EB98055EDD44}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="RC_Ambience_Tree_OnLoop" ID="{99207C70-C433-4997-A029-347138717430}" ShortID="708940731">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="AM_UI" ID="{19FA8CD0-D5A4-4106-B8BB-B419925C701B}" ShortID="427772203">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="UI" ID="{202EED7B-4AC4-4028-AD6B-DD9D70463D46}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+							<ObjectRef Name="AB_UI" ID="{202EED7B-4AC4-4028-AD6B-DD9D70463D46}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="RC_UI_Notification" ID="{87B62F64-8537-4BE9-8F4C-F3D17123E43E}" ShortID="181708792">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+									<ObjectRef Name="AB_UI_Notifications" ID="{5A1A3F82-09D2-4A2F-98C9-B3F9C1BFBACD}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 								</Reference>
 							</ReferenceList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="RC_UI_OnTimeChange" ID="{D17E4260-055B-43DF-B4BC-A0576B92B040}" ShortID="658414100">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+									<ObjectRef Name="AB_UI_Time" ID="{F0884488-FDA1-4D7C-8E8B-E06EC01D63B9}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ticking clock" ID="{422F8F5D-4CCD-4242-BC51-AE476A65DA34}" ShortID="1018125270">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ticking clock" ID="{B321DFBB-4C26-47F7-A4B1-19A0388653B5}" ShortID="202485508">
+											<Language>SFX</Language>
+											<AudioFile>ticking clock.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ticking clock" ID="{B321DFBB-4C26-47F7-A4B1-19A0388653B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="AM_SoundEffects" ID="{67799595-622B-46C7-82CA-279C51C6F085}" ShortID="1031683848">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+							<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="AM_SoundEffects_Building" ID="{5B42D2EF-B2A1-4F7E-A368-E057EBE6AC4A}" ShortID="268123688">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+									<ObjectRef Name="AB_SoundEffects_Buildings" ID="{B1530903-F67D-4C18-9280-227F8878D32D}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -754,7 +1630,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+															<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -802,7 +1678,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 												<Reference Name="SwitchGroupOrStateGroup">
 													<ObjectRef Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
@@ -815,7 +1691,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+															<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -868,7 +1744,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 												<Reference Name="SwitchGroupOrStateGroup">
 													<ObjectRef Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
@@ -881,7 +1757,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+															<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -929,7 +1805,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 												<Reference Name="SwitchGroupOrStateGroup">
 													<ObjectRef Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
@@ -942,15 +1818,15 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+															<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="crt-monitor-power-on-with-15-31141" ID="{582A592F-2137-42CE-9943-24C87F3239AB}" ShortID="727199113">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.848878260178117"/>
-																<Property Name="LoopBegin" Type="Real64" Value="0"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.70778264153944"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>crt-monitor-power-on-with-15-31141.wav</AudioFile>
@@ -1009,7 +1885,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+													<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 												</Reference>
 												<Reference Name="SwitchGroupOrStateGroup">
 													<ObjectRef Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}" WorkUnitID="{53987E09-1538-4560-B682-6A9946674B67}"/>
@@ -1022,7 +1898,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
+															<ObjectRef Name="AB_SoundEffects" ID="{8F1207EC-3DE7-4F2D-9AD8-3ECBA57C614F}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1126,28 +2002,6 @@
 										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
-							</ChildrenList>
-						</ActorMixer>
-						<ActorMixer Name="AM_SoundEffects_Tree" ID="{8ACC32FF-6D63-45BA-B092-1EB5D1BD52E5}" ShortID="202480264">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="RC_SoundEffects_Tree_OnLoop" ID="{99207C70-C433-4997-A029-347138717430}" ShortID="708940731">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8A893B47-E774-46F9-96E2-4D2455442752}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2D36B34-70FE-4E3F-9627-DF4E5FA2E559}"/>
-										</Reference>
-									</ReferenceList>
-								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>

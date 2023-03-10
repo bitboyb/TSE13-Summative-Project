@@ -29,12 +29,18 @@ namespace DayNightCycle
 
         public void AddTime()
         {
-            AkSoundEngine.PostEvent(timeNotifyEvent, gameObject);
             _timeOfDay++;
-
-            if (_timeOfDay == 24)
+            
+            if(_timeOfDay == 12)
+                AkSoundEngine.PostEvent(timeNotifyEvent, gameObject);
+            else if(_timeOfDay == 9)
+                AkSoundEngine.PostEvent(timeNotifyEvent, gameObject);
+            else if (_timeOfDay == 17)
+                AkSoundEngine.PostEvent(timeNotifyEvent, gameObject);
+            else if (_timeOfDay == 24)
             {
                 _timeOfDay = 0;
+                AkSoundEngine.PostEvent(timeNotifyEvent, gameObject);
             }
 
             SetTimeOfDayState();
