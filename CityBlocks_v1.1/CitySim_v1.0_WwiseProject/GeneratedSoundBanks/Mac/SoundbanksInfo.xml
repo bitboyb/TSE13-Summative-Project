@@ -21,7 +21,8 @@
 			<ShortName>Master_SoundBank</ShortName>
 			<Path>Master_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2755574209" Name="Play_Block" ObjectPath="\Events\Default Work Unit\Play_Block" DurationType="OneShot" DurationMin="1.592708" DurationMax="3.707375"/>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite"/>
+				<Event Id="2755574209" Name="Play_Block" ObjectPath="\Events\Default Work Unit\Play_Block" DurationType="Infinite"/>
 				<Event Id="2024731561" Name="Play_Eiffel_Tower" ObjectPath="\Events\Default Work Unit\Play_Eiffel_Tower" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3770632381" Name="Play_ExampleCity" ObjectPath="\Events\Default Work Unit\Play_ExampleCity" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1497459184" Name="Play_GameStart" ObjectPath="\Events\Default Work Unit\Play_GameStart" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -40,35 +41,79 @@
 			<IncludedMemoryFiles>
 				<File Id="24421873" Language="SFX">
 					<ShortName>church-bells-at-noon-on-sunday-prague-19590.wav</ShortName>
-					<Path>SFX\church-bells-at-noon-on-sunday-prague-19590_D12175BF.wem</Path>
+					<Path>SFX\church-bells-at-noon-on-sunday-prague-19590_1E4E477F.wem</Path>
 				</File>
 				<File Id="46877178" Language="SFX">
 					<ShortName>cash-register-fake-88639.wav</ShortName>
-					<Path>SFX\cash-register-fake-88639_3FD50A59.wem</Path>
+					<Path>SFX\cash-register-fake-88639_F2B9B919.wem</Path>
+				</File>
+				<File Id="168037456" Language="SFX">
+					<ShortName>highway-14475.wav</ShortName>
+					<Path>SFX\highway-14475_759E77B5.wem</Path>
 				</File>
 				<File Id="202485508" Language="SFX">
 					<ShortName>ticking clock.wav</ShortName>
-					<Path>SFX\ticking clock_3FD50A59.wem</Path>
+					<Path>SFX\ticking clock_F2B9B919.wem</Path>
+				</File>
+				<File Id="208224049" Language="SFX">
+					<ShortName>road-7016.wav</ShortName>
+					<Path>SFX\road-7016_39A11F86.wem</Path>
+				</File>
+				<File Id="231188284" Language="SFX">
+					<ShortName>a-slightly-windy-afternoon-in-rural-greece-26039.wav</ShortName>
+					<Path>SFX\a-slightly-windy-afternoon-in-rural-greece-26039_0FAC6EA2.wem</Path>
+				</File>
+				<File Id="233754446" Language="SFX">
+					<ShortName>birdsong-at-dawn-lucca-52682.wav</ShortName>
+					<Path>SFX\birdsong-at-dawn-lucca-52682_85C21AE7.wem</Path>
 				</File>
 				<File Id="241511680" Language="SFX">
 					<ShortName>MusicLoop1.wav</ShortName>
-					<Path>SFX\MusicLoop1_3EBA1927.wem</Path>
+					<Path>SFX\MusicLoop1_85C21AE7.wem</Path>
+				</File>
+				<File Id="376966467" Language="SFX">
+					<ShortName>lateafternoonsept12th2015smallmidwesttown-24870.wav</ShortName>
+					<Path>SFX\lateafternoonsept12th2015smallmidwesttown-24870_F097F344.wem</Path>
+				</File>
+				<File Id="395430298" Language="SFX">
+					<ShortName>nitgh-ambience-6710.wav</ShortName>
+					<Path>SFX\nitgh-ambience-6710_85C21AE7.wem</Path>
+				</File>
+				<File Id="603856354" Language="SFX">
+					<ShortName>city-terrace-night-16943.wav</ShortName>
+					<Path>SFX\city-terrace-night-16943_DA83AB5A.wem</Path>
+				</File>
+				<File Id="640086448" Language="SFX">
+					<ShortName>office-ambience-6322.wav</ShortName>
+					<Path>SFX\office-ambience-6322_85C21AE7.wem</Path>
 				</File>
 				<File Id="689322020" Language="SFX">
 					<ShortName>elevator-ding-at-arenco-tower-dubai-38520.wav</ShortName>
-					<Path>SFX\elevator-ding-at-arenco-tower-dubai-38520_3FD50A59.wem</Path>
+					<Path>SFX\elevator-ding-at-arenco-tower-dubai-38520_F2B9B919.wem</Path>
 				</File>
 				<File Id="727199113" Language="SFX">
 					<ShortName>crt-monitor-power-on-with-15-31141.wav</ShortName>
-					<Path>SFX\crt-monitor-power-on-with-15-31141_2D76DBA0.wem</Path>
+					<Path>SFX\crt-monitor-power-on-with-15-31141_791179E0.wem</Path>
+				</File>
+				<File Id="781779642" Language="SFX">
+					<ShortName>the-country-sound-of-new-milks-in-high-peak-17103.wav</ShortName>
+					<Path>SFX\the-country-sound-of-new-milks-in-high-peak-17103_E413F7BE.wem</Path>
 				</File>
 				<File Id="846392495" Language="SFX">
 					<ShortName>busy-office-no-people-loop-6719.wav</ShortName>
-					<Path>SFX\busy-office-no-people-loop-6719_CCACC7C5.wem</Path>
+					<Path>SFX\busy-office-no-people-loop-6719_88C6E785.wem</Path>
+				</File>
+				<File Id="857142918" Language="SFX">
+					<ShortName>indoor_-apartments_hall_noise-6840.wav</ShortName>
+					<Path>SFX\indoor_-apartments_hall_noise-6840_85C21AE7.wem</Path>
 				</File>
 				<File Id="878138975" Language="SFX">
 					<ShortName>knocking.wav</ShortName>
-					<Path>SFX\knocking_3FD50A59.wem</Path>
+					<Path>SFX\knocking_F2B9B919.wem</Path>
+				</File>
+				<File Id="966536679" Language="SFX">
+					<ShortName>1st-floor-apartment-hallway-neighbors-talking-59611.wav</ShortName>
+					<Path>SFX\1st-floor-apartment-hallway-neighbors-talking-59611_85C21AE7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
