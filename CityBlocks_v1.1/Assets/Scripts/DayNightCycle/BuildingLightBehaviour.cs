@@ -19,7 +19,6 @@ namespace DayNightCycle
         {
             _gameSettings = GameObject.Find("GameManager").GetComponent<GameSettings>();
             _timeOfDayBehaviour = GameObject.Find("GameManager").GetComponent<TimeOfDayBehaviour>();
-            
         }
 
         private void Update()
@@ -27,48 +26,48 @@ namespace DayNightCycle
             if (_gameSettings.createdBuildings.Count > lastCount)
             {
                 lastCount++;
-                //ChangeShaderIllumination();
+                ChangeShaderIllumination();
             }
                 
             if(_lastTimeOfDayState != _timeOfDayBehaviour.GetTimeOfDayState())
             {
-                //ChangeShaderIllumination();
+                ChangeShaderIllumination();
             }
         }
 
         private void ChangeShaderIllumination()
         {
-            //TODO: BuildingsVertexColour.shader has a float on line 41 I wish to change depending on the state of the day :(
-            
             _lastTimeOfDayState = _timeOfDayBehaviour.GetTimeOfDayState();
 
             foreach (var building in _gameSettings.createdBuildings)
             {
-                var buildingRenderer = building.GetComponent<Renderer>();
+                var buildingRenderer = gameObject.GetComponent<MeshRenderer>();
                 
                 if (building.name.StartsWith("Shop"))
                 {
-                    buildingRenderer = building.transform.GetChild(3).GetComponent<Renderer>();
+                    buildingRenderer = building.transform.GetChild(3).GetComponent<MeshRenderer>();
+                }
+                else if (building.name.StartsWith("Elevator"))
+                {
+                    buildingRenderer = building.transform.GetChild(2).GetComponent<MeshRenderer>();
+                }
+                else if (building.name.StartsWith("Apartment"))
+                {
+                    buildingRenderer = building.transform.GetChild(0).GetComponent<MeshRenderer>();
                 }
                 else
                 {
-                    buildingRenderer = building.transform.GetChild(0).GetComponent<Renderer>();
+                    continue;
                 }
-
-
-                var buildingShaderProperty = "_IlluminationPower";
-                var buildingShaderValue = 0f;
 
                 if (_timeOfDayBehaviour.GetTimeOfDayState() == "Morning" || _timeOfDayBehaviour.GetTimeOfDayState() == "Afternoon")
                 {
-                    buildingShaderValue = morningLightIntensity;
+                    buildingRenderer.material.SetFloat("_IlluminationPower", morningLightIntensity);
                 }
                 else
                 {
-                    buildingShaderValue = eveningLightIntensity;    
+                    buildingRenderer.material.SetFloat("_IlluminationPower", eveningLightIntensity);
                 }
-
-                buildingRenderer.material.SetFloat(buildingShaderProperty, buildingShaderValue);
             }
         }
     }

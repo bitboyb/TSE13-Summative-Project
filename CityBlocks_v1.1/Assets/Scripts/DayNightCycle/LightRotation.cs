@@ -9,7 +9,7 @@ namespace DayNightCycle
     public class LightRotation : MonoBehaviour
     {
         private float rotationAngle = 15f;
-        private float rotationTime = 5f;
+        [SerializeField] private float rotationTime = 5f;
         private float currentAngle = 0f;
         private float elapsedTime = 0f;
 
