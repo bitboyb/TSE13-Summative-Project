@@ -13,6 +13,13 @@
 						<Switch Name="Shop" ID="{57BF6025-6A7A-4D3A-92D4-551A43B4291B}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Building_Position" ID="{E87FB906-EE1D-4535-A9C9-7BB280AC350C}">
+					<ChildrenList>
+						<Switch Name="Top" ID="{37BA0743-07CA-4F8D-A5AC-B80184EE4D4B}"/>
+						<Switch Name="Middle" ID="{BD223C81-E337-45FC-9D94-C8BD3279A6C7}"/>
+						<Switch Name="Bottom" ID="{19B51B2C-C442-44A4-BADC-0DEB4D22B133}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

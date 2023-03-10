@@ -2,46 +2,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Audio
 {
     public class BuildingAudioBehaviour : MonoBehaviour
     {
-        private string buildingTypeSwitch = "Building_Type";
-        private string buildingPositionSwitch = "Building_Position";
-        private string[] buildingPrefix;
+        private string _buildingTypeSwitch = "Building_Type";
+        private string _buildingPositionSwitch = "Building_Position";
+        private string[] _buildingPrefix;
         
-        [SerializeField] private string startEvent, stopEvent;
+        private string _startEvent = "Play_Block", _stopEvent = "Stop_Block";
 
         private void Start()
         {
-            buildingPrefix = new string[6] {"Apartment", "CityHall", "Elevator", "Office", "Power", "Shop"};
+            _buildingPrefix = new string[6] {"Apartment", "CityHall", "Elevator", "Office", "Power", "Shop"};
             SetBuildingType();
+            AkSoundEngine.PostEvent(_startEvent, gameObject);
         }
     
         private void SetBuildingType()
         {
-            foreach (var prefix in buildingPrefix)
+            for(int i = 0; i <= _buildingPrefix.Length; i++)
             {
-                AkSoundEngine.SetSwitch(buildingTypeSwitch, prefix, gameObject);
-                startEvent = "Play_Block_" + prefix;
-                stopEvent = "Stop_Block_" + prefix;
+                if(gameObject.name.Contains(_buildingPrefix[i]))
+                {
+                    AkSoundEngine.SetSwitch(_buildingTypeSwitch, _buildingPrefix[i], gameObject);
+                    break;
+                }
             }
         }
 
         public void SetBuildingPosition(string position)
         {
-            AkSoundEngine.SetSwitch(buildingPositionSwitch, position, gameObject);
-        }
-
-        private void OnEnable()
-        {
-            AkSoundEngine.PostEvent(startEvent, gameObject);
+            AkSoundEngine.SetSwitch(_buildingPositionSwitch, position, gameObject);
         }
 
         private void OnDestroy()
         {
-            AkSoundEngine.PostEvent(stopEvent, gameObject);
+            AkSoundEngine.PostEvent(_stopEvent, gameObject);
         }
     }
 }

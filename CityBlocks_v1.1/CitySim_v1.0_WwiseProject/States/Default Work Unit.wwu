@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{002C2EB6-6C65-441C-BCB0-1631B37EA60F}" SchemaVersion="94">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{002C2EB6-6C65-441C-BCB0-1631B37EA60F}" PersistMode="Standalone">
-			<ChildrenList>
-				<StateGroup Name="Time_Of_Day" ID="{FC62D1CE-1CD5-4560-B4DE-48746E054A8E}">
-					<ChildrenList>
-						<State Name="None" ID="{B978C04F-D783-4051-BAF3-D082ECBBA586}"/>
-						<State Name="Morning" ID="{0B703636-9F96-4F8E-ADDC-9976B54F39EB}"/>
-						<State Name="Afternoon" ID="{45009165-B5DC-43C3-A50D-CF4E843220A9}"/>
-						<State Name="Evening" ID="{1E18B244-C061-4368-A6AA-64B537D81D2F}"/>
-						<State Name="Night" ID="{A7B03F65-7287-48C7-B3D7-AD3B01879140}"/>
-					</ChildrenList>
-				</StateGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{002C2EB6-6C65-441C-BCB0-1631B37EA60F}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>

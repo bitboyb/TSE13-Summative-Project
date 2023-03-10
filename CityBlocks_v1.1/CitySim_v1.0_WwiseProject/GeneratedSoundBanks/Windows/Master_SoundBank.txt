@@ -1,31 +1,41 @@
 Event	ID	Name			Wwise Object Path	Notes
-	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
-	478568288	Play_Block_CityHall			\Default Work Unit\Play_Block_CityHall	
-	661781820	Stop_Block_Apartment			\Default Work Unit\Stop_Block_Apartment	
+	82799811	Play_Time_Notify			\Default Work Unit\Play_Time_Notify	
 	870522975	Stop_Eiffel_Tower			\Default Work Unit\Stop_Eiffel_Tower	
 	1497459184	Play_GameStart			\Default Work Unit\Play_GameStart	
-	1788156355	Play_Block_Power_Propeler			\Default Work Unit\Play_Block_Power_Propeler	
-	1858226889	Stop_Block_Power_Propeler			\Default Work Unit\Stop_Block_Power_Propeler	
+	1900282211	Stop_Block			\Default Work Unit\Stop_Block	
 	2024731561	Play_Eiffel_Tower			\Default Work Unit\Play_Eiffel_Tower	
-	2126453631	Play_Block_Power			\Default Work Unit\Play_Block_Power	
-	2292956854	Play_Block_Apartment			\Default Work Unit\Play_Block_Apartment	
 	2405925199	Play_Notification			\Default Work Unit\Play_Notification	
 	2418344944	Stop_Tree			\Default Work Unit\Stop_Tree	
 	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
-	2546847810	Play_Block_Elevator			\Default Work Unit\Play_Block_Elevator	
-	2551336358	Stop_Block_Office			\Default Work Unit\Stop_Block_Office	
+	2755574209	Play_Block			\Default Work Unit\Play_Block	
 	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
-	3364399272	Stop_Block_Elevator			\Default Work Unit\Stop_Block_Elevator	
 	3492314494	Play_Tree			\Default Work Unit\Play_Tree	
-	3723240680	Play_Block_Shop			\Default Work Unit\Play_Block_Shop	
 	3738227045	Play_Slider_EndDrag			\Default Work Unit\Play_Slider_EndDrag	
 	3770632381	Play_ExampleCity			\Default Work Unit\Play_ExampleCity	
 	3847328251	Stop_ExampleCity			\Default Work Unit\Stop_ExampleCity	
-	3949330844	Play_Block_Office			\Default Work Unit\Play_Block_Office	
-	4069151121	Stop_Block_Power			\Default Work Unit\Stop_Block_Power	
-	4170772026	Stop_Block_Shop			\Default Work Unit\Stop_Block_Shop	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2032085148	Building_Type			\Default Work Unit\Building_Type	
+	2980652549	Building_Position			\Default Work Unit\Building_Position	
+
+Switch	ID	Name	Switch Group			Notes
+	251412225	Shop	Building_Type			
+	291480329	CityHall	Building_Type			
+	1547173777	Office	Building_Type			
+	2391494160	Power	Building_Type			
+	3705378287	Elevator	Building_Type			
+	4154495109	Apartment	Building_Type			
+	1026627430	Middle	Building_Position			
+	1080872010	Top	Building_Position			
+	3898915424	Bottom	Building_Position			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	24421873	SFX_SoundEffects_Building_OnInstantiate_CityHall	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\church-bells-at-noon-on-sunday-prague-19590_D12175BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_SoundEffects\AM_SoundEffects_Building\SC_SoundEffects_Building_OnInstatiate\SFX_SoundEffects_Building_OnInstantiate_CityHall		25007
+	46877178	cash-register-fake-88639	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\cash-register-fake-88639_3FD50A59.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_SoundEffects\AM_SoundEffects_Building\SC_SoundEffects_Building_OnInstatiate\SC_SoundEffects_Building_OnInstantiate_Shop\cash-register-fake-88639		22932
 	241511680	MC_Music_GameLoop	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\MusicLoop1_3EBA1927.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_Music\MC_Music_GameLoop		502369
+	689322020	elevator-ding-at-arenco-tower-dubai-38520	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\elevator-ding-at-arenco-tower-dubai-38520_3FD50A59.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_SoundEffects\AM_SoundEffects_Building\SC_SoundEffects_Building_OnInstatiate\SC_SoundEffects_Building_OnInstantiate_Elevator\elevator-ding-at-arenco-tower-dubai-38520		23344
+	727199113	crt-monitor-power-on-with-15-31141	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\crt-monitor-power-on-with-15-31141_8A2D4A75.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_SoundEffects\AM_SoundEffects_Building\SC_SoundEffects_Building_OnInstatiate\SC_SoundEffects_Building_OnInstantiate_Power\crt-monitor-power-on-with-15-31141		24769
+	846392495	busy-office-no-people-loop-6719	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\busy-office-no-people-loop-6719_CCACC7C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_SoundEffects\AM_SoundEffects_Building\SC_SoundEffects_Building_OnInstatiate\SC_SoundEffects_Building_OnInstantiate_Office\busy-office-no-people-loop-6719		50030
+	878138975	knocking	D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\CitySim_v1.0_WwiseProject\.cache\Windows\SFX\knocking_3FD50A59.wem		\Actor-Mixer Hierarchy\Default Work Unit\AM_SoundEffects\AM_SoundEffects_Building\SC_SoundEffects_Building_OnInstatiate\SC_SoundEffects_Building_OnInstantiate_Apartment\knocking		14802
 

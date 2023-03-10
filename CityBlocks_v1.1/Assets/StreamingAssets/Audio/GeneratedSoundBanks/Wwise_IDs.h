@@ -13,53 +13,37 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
-        static const AkUniqueID PLAY_BLOCK_APARTMENT = 2292956854U;
-        static const AkUniqueID PLAY_BLOCK_CITYHALL = 478568288U;
-        static const AkUniqueID PLAY_BLOCK_ELEVATOR = 2546847810U;
-        static const AkUniqueID PLAY_BLOCK_OFFICE = 3949330844U;
-        static const AkUniqueID PLAY_BLOCK_POWER = 2126453631U;
-        static const AkUniqueID PLAY_BLOCK_POWER_PROPELER = 1788156355U;
-        static const AkUniqueID PLAY_BLOCK_SHOP = 3723240680U;
+        static const AkUniqueID PLAY_BLOCK = 2755574209U;
         static const AkUniqueID PLAY_EIFFEL_TOWER = 2024731561U;
         static const AkUniqueID PLAY_EXAMPLECITY = 3770632381U;
         static const AkUniqueID PLAY_GAMESTART = 1497459184U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NOTIFICATION = 2405925199U;
         static const AkUniqueID PLAY_SLIDER_ENDDRAG = 3738227045U;
+        static const AkUniqueID PLAY_TIME_NOTIFY = 82799811U;
         static const AkUniqueID PLAY_TREE = 3492314494U;
         static const AkUniqueID STOP_AMBIENCE = 2477713992U;
-        static const AkUniqueID STOP_BLOCK_APARTMENT = 661781820U;
-        static const AkUniqueID STOP_BLOCK_ELEVATOR = 3364399272U;
-        static const AkUniqueID STOP_BLOCK_OFFICE = 2551336358U;
-        static const AkUniqueID STOP_BLOCK_POWER = 4069151121U;
-        static const AkUniqueID STOP_BLOCK_POWER_PROPELER = 1858226889U;
-        static const AkUniqueID STOP_BLOCK_SHOP = 4170772026U;
+        static const AkUniqueID STOP_BLOCK = 1900282211U;
         static const AkUniqueID STOP_EIFFEL_TOWER = 870522975U;
         static const AkUniqueID STOP_EXAMPLECITY = 3847328251U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_TREE = 2418344944U;
     } // namespace EVENTS
 
-    namespace STATES
-    {
-        namespace TIME_OF_DAY
-        {
-            static const AkUniqueID GROUP = 207908541U;
-
-            namespace STATE
-            {
-                static const AkUniqueID AFTERNOON = 390531879U;
-                static const AkUniqueID EVENING = 2905060079U;
-                static const AkUniqueID MORNING = 1924633667U;
-                static const AkUniqueID NIGHT = 1011622525U;
-            } // namespace STATE
-        } // namespace TIME_OF_DAY
-
-    } // namespace STATES
-
     namespace SWITCHES
     {
+        namespace BUILDING_POSITION
+        {
+            static const AkUniqueID GROUP = 2980652549U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BOTTOM = 3898915424U;
+                static const AkUniqueID MIDDLE = 1026627430U;
+                static const AkUniqueID TOP = 1080872010U;
+            } // namespace SWITCH
+        } // namespace BUILDING_POSITION
+
         namespace BUILDING_TYPE
         {
             static const AkUniqueID GROUP = 2032085148U;

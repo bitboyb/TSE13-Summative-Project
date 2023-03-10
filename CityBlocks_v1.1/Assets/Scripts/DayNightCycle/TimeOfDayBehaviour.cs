@@ -11,8 +11,9 @@ namespace DayNightCycle
         private Text _timeText;
         private int _timeOfDay = 6;
         private string _timeOfDayState;
-        
+
         public AK.Wwise.RTPC timeOfDayRTPC;
+        public string timeNotifyEvent;
 
         private void Start()
         {
@@ -28,6 +29,7 @@ namespace DayNightCycle
 
         public void AddTime()
         {
+            AkSoundEngine.PostEvent(timeNotifyEvent, gameObject);
             _timeOfDay++;
 
             if (_timeOfDay == 24)

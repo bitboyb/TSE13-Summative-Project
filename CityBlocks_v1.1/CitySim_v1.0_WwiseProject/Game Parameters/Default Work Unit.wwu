@@ -14,30 +14,34 @@
 						<Property Name="Max" Type="Real64" Value="23"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="Master_Volume" ID="{E15FF5DF-EFCE-4E66-B7D2-5FFE9A04873B}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="SFX_Volume" ID="{032E5DC4-E485-4717-B59E-14A10EC8654D}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Music_Volume" ID="{12E709E8-801B-48E6-8DA3-1FDAE3E7949D}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="UI_Volume" ID="{91F4509B-EDBF-43B0-B1DF-18771F781AAF}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
+				<Folder Name="Volumes" ID="{6BC0CE2E-D961-4B1F-AFC5-1008802F0E5E}" ShortID="435645750">
+					<ChildrenList>
+						<GameParameter Name="SFX_Volume" ID="{032E5DC4-E485-4717-B59E-14A10EC8654D}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="UI_Volume" ID="{91F4509B-EDBF-43B0-B1DF-18771F781AAF}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Master_Volume" ID="{E15FF5DF-EFCE-4E66-B7D2-5FFE9A04873B}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Music_Volume" ID="{12E709E8-801B-48E6-8DA3-1FDAE3E7949D}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+								<Property Name="Max" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
