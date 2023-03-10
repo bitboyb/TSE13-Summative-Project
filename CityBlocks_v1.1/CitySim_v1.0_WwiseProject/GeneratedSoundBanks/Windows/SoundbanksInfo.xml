@@ -61,11 +61,11 @@
 				</File>
 				<File Id="231188284" Language="SFX">
 					<ShortName>a-slightly-windy-afternoon-in-rural-greece-26039.wav</ShortName>
-					<Path>SFX\a-slightly-windy-afternoon-in-rural-greece-26039_0FAC6EA2.wem</Path>
+					<Path>SFX\a-slightly-windy-afternoon-in-rural-greece-26039_E3D1A765.wem</Path>
 				</File>
 				<File Id="233754446" Language="SFX">
 					<ShortName>birdsong-at-dawn-lucca-52682.wav</ShortName>
-					<Path>SFX\birdsong-at-dawn-lucca-52682_85C21AE7.wem</Path>
+					<Path>SFX\birdsong-at-dawn-lucca-52682_3290D7A4.wem</Path>
 				</File>
 				<File Id="241511680" Language="SFX">
 					<ShortName>MusicLoop1.wav</ShortName>
@@ -73,15 +73,11 @@
 				</File>
 				<File Id="376966467" Language="SFX">
 					<ShortName>lateafternoonsept12th2015smallmidwesttown-24870.wav</ShortName>
-					<Path>SFX\lateafternoonsept12th2015smallmidwesttown-24870_F097F344.wem</Path>
-				</File>
-				<File Id="395430298" Language="SFX">
-					<ShortName>nitgh-ambience-6710.wav</ShortName>
-					<Path>SFX\nitgh-ambience-6710_85C21AE7.wem</Path>
+					<Path>SFX\lateafternoonsept12th2015smallmidwesttown-24870_401AA6F3.wem</Path>
 				</File>
 				<File Id="603856354" Language="SFX">
 					<ShortName>city-terrace-night-16943.wav</ShortName>
-					<Path>SFX\city-terrace-night-16943_DA83AB5A.wem</Path>
+					<Path>SFX\city-terrace-night-16943_58B0EB1D.wem</Path>
 				</File>
 				<File Id="640086448" Language="SFX">
 					<ShortName>office-ambience-6322.wav</ShortName>
@@ -97,7 +93,7 @@
 				</File>
 				<File Id="781779642" Language="SFX">
 					<ShortName>the-country-sound-of-new-milks-in-high-peak-17103.wav</ShortName>
-					<Path>SFX\the-country-sound-of-new-milks-in-high-peak-17103_E413F7BE.wem</Path>
+					<Path>SFX\the-country-sound-of-new-milks-in-high-peak-17103_B8393081.wem</Path>
 				</File>
 				<File Id="846392495" Language="SFX">
 					<ShortName>busy-office-no-people-loop-6719.wav</ShortName>
@@ -114,6 +110,10 @@
 				<File Id="966536679" Language="SFX">
 					<ShortName>1st-floor-apartment-hallway-neighbors-talking-59611.wav</ShortName>
 					<Path>SFX\1st-floor-apartment-hallway-neighbors-talking-59611_85C21AE7.wem</Path>
+				</File>
+				<File Id="995875610" Language="SFX">
+					<ShortName>nitgh-ambience-6710.wav</ShortName>
+					<Path>SFX\nitgh-ambience-6710_3290D7A4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

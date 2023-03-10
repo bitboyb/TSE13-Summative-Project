@@ -54,19 +54,19 @@ namespace DayNightCycle
             switch (_timeOfDay)
             {
                 case 6:
-                    AkSoundEngine.SetState("Time_Of_Day", "Morning");
+                    //AkSoundEngine.SetState("Time_Of_Day", "Morning");
                     _timeOfDayState = "Morning";
                     break;
                 case 12:
-                    AkSoundEngine.SetState("Time_Of_Day", "Afternoon");
+                    //AkSoundEngine.SetState("Time_Of_Day", "Afternoon");
                     _timeOfDayState = "Afternoon";
                     break;
                 case 18:
-                    AkSoundEngine.SetState("Time_Of_Day", "Evening");
+                    //AkSoundEngine.SetState("Time_Of_Day", "Evening");
                     _timeOfDayState = "Evening";
                     break;
                 case 24:
-                    AkSoundEngine.SetState("Time_Of_Day", "Night");
+                    //AkSoundEngine.SetState("Time_Of_Day", "Night");
                     _timeOfDayState = "Night";
                     break;
             }
