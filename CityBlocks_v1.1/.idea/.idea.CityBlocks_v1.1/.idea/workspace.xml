@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="74014f22-4ad4-4432-815a-639ae920cce8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBlocks_v1.1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBlocks_v1.1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DayNightCycle/LightRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DayNightCycle/LightRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Square City Architect/Scripts/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Square City Architect/Scripts/BuildingManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor/UI/LayoutElementEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Tests/Editor/InputField/ContentValidation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/BuildingAudioBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/GameStartAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/SettingsBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DayNightCycle/BuildingLightBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,7 +93,7 @@
       <workItem from="1678378176139" duration="3140000" />
       <workItem from="1678386231766" duration="833000" />
       <workItem from="1678437892645" duration="62000" />
-      <workItem from="1678437969491" duration="1206000" />
+      <workItem from="1678437969491" duration="2558000" />
     </task>
     <servers />
   </component>
@@ -104,37 +104,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Audio/GameStartAudio.cs</url>
-          <line>25</line>
-          <properties documentPath="D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\Assets\Scripts\Audio\GameStartAudio.cs" initialLine="25" containingFunctionPresentation="method 'OnDestroy'">
-            <startOffsets>
-              <option value="656" />
-            </startOffsets>
-            <endOffsets>
-              <option value="690" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Audio/GameStartAudio.cs</url>
-          <line>27</line>
-          <properties documentPath="D:\Unity Prototypes\TSE13-Summative-Project\CityBlocks_v1.1\Assets\Scripts\Audio\GameStartAudio.cs" initialLine="27" containingFunctionPresentation="method 'OnDestroy'">
-            <startOffsets>
-              <option value="721" />
-            </startOffsets>
-            <endOffsets>
-              <option value="758" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

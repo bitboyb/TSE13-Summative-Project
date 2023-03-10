@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Audio;
+using UnityEngine;
 /// <summary>
 /// Script responsible for building single object
 /// </summary>
@@ -10,11 +11,13 @@ public class BuildingManager : MonoBehaviour
 	[SerializeField] private GameObject[] top;
 	private Animator animator;
 	private GameSettings.MapStatus status;
+	private BuildingAudioBehaviour _buildingAudioBehaviour;
 
 	void Awake()
 	{
 		GameSettings.OnUpdateStatus += OnUpdateStatus;
 		animator = GetComponent<Animator>();
+		_buildingAudioBehaviour = GetComponent<BuildingAudioBehaviour>();
 	}
 
 	/// <summary>
@@ -28,6 +31,7 @@ public class BuildingManager : MonoBehaviour
 			for (int i = 0; i < bottom.Length; i++)
 			{
 				bottom[i].SetActive(true);
+				_buildingAudioBehaviour.SetBuildingPosition("Bottom");
 			}
 		}
 		else if (GameSettings.Instance.GetMiddleLevel() > transform.position.y && transform.position.y >= GameSettings.Instance.GetBottomLevel())
@@ -36,6 +40,7 @@ public class BuildingManager : MonoBehaviour
 			for (int i = 0; i < middle.Length; i++)
 			{
 				middle[i].SetActive(true);
+				_buildingAudioBehaviour.SetBuildingPosition("Middle");
 			}
 		}
 		else if (GameSettings.Instance.GetMiddleLevel() <= transform.position.y)
@@ -44,6 +49,7 @@ public class BuildingManager : MonoBehaviour
 			for (int i = 0; i < top.Length; i++)
 			{
 				top[i].SetActive(true);
+				_buildingAudioBehaviour.SetBuildingPosition("Top");
 			}
 		}
 		else
