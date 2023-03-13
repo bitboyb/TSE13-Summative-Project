@@ -44,7 +44,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_Ambience" ID="{EB57513D-2627-4A3B-B5A6-7A0BF22EBD81}"/>
+				<Event Name="Stop_Ambience" ID="{EB57513D-2627-4A3B-B5A6-7A0BF22EBD81}">
+					<ChildrenList>
+						<Action Name="" ID="{CE348A90-1464-4E01-8653-C713EAFD1CD0}" ShortID="494467627">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BC_Ambience_MasterAmbience" ID="{1E207FB3-F904-4BD3-9CC4-56B303D65672}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Stop_Music" ID="{B69501EA-5440-4C92-AB87-24CD2619A944}">
 					<ChildrenList>
 						<Action Name="" ID="{5469F771-7FEE-4FD8-9989-CE58E50AC34B}" ShortID="702731961">
@@ -119,6 +132,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SC_Ambience_Building_OnLoop" ID="{FDEEEC92-262D-4426-9627-FDFB02026C19}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience" ID="{07DC2853-D549-41AE-85B2-DD3D9F09F173}">
+					<ChildrenList>
+						<Action Name="" ID="{9338B8F4-B38B-438B-8E3D-CC047BC33ED8}" ShortID="1007967087">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BC_Ambience_MasterAmbience" ID="{1E207FB3-F904-4BD3-9CC4-56B303D65672}" WorkUnitID="{D5027592-19EB-46EC-AC38-EEAD873839DB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

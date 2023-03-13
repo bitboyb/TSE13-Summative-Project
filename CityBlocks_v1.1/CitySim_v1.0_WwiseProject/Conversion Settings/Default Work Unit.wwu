@@ -40,14 +40,14 @@
 						<ConversionPluginInfo Platform="Mac">
 							<ConversionPlugin Name="" ID="{33CB4492-4E17-4B6B-A1D2-7A2DD110B28A}" PluginName="Vorbis" CompanyID="0" PluginID="4">
 								<PropertyList>
-									<Property Name="QualityFactor" Type="Real32" Value="5"/>
+									<Property Name="QualityFactor" Type="Real32" Value="7"/>
 								</PropertyList>
 							</ConversionPlugin>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
 							<ConversionPlugin Name="" ID="{2F49D947-E6EC-4FF0-B0BC-9A929C5C374B}" PluginName="Vorbis" CompanyID="0" PluginID="4">
 								<PropertyList>
-									<Property Name="QualityFactor" Type="Real32" Value="5"/>
+									<Property Name="QualityFactor" Type="Real32" Value="7"/>
 								</PropertyList>
 							</ConversionPlugin>
 						</ConversionPluginInfo>

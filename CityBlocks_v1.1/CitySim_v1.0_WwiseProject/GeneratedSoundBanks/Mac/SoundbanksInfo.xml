@@ -47,6 +47,10 @@
 					<ShortName>cash-register-fake-88639.wav</ShortName>
 					<Path>SFX\cash-register-fake-88639_F2B9B919.wem</Path>
 				</File>
+				<File Id="105459048" Language="SFX">
+					<ShortName>metal_workshop_3-20094.wav</ShortName>
+					<Path>SFX\metal_workshop_3-20094_85C21AE7.wem</Path>
+				</File>
 				<File Id="168037456" Language="SFX">
 					<ShortName>highway-14475.wav</ShortName>
 					<Path>SFX\highway-14475_759E77B5.wem</Path>
@@ -71,9 +75,17 @@
 					<ShortName>MusicLoop1.wav</ShortName>
 					<Path>SFX\MusicLoop1_85C21AE7.wem</Path>
 				</File>
+				<File Id="253605121" Language="SFX">
+					<ShortName>wind-turbine-blades-34566.wav</ShortName>
+					<Path>SFX\wind-turbine-blades-34566_97027028.wem</Path>
+				</File>
 				<File Id="376966467" Language="SFX">
 					<ShortName>lateafternoonsept12th2015smallmidwesttown-24870.wav</ShortName>
 					<Path>SFX\lateafternoonsept12th2015smallmidwesttown-24870_401AA6F3.wem</Path>
+				</File>
+				<File Id="504247995" Language="SFX">
+					<ShortName>industrial-machine-cycle-73890.wav</ShortName>
+					<Path>SFX\industrial-machine-cycle-73890_C072AA74.wem</Path>
 				</File>
 				<File Id="603856354" Language="SFX">
 					<ShortName>city-terrace-night-16943.wav</ShortName>
@@ -91,6 +103,10 @@
 					<ShortName>crt-monitor-power-on-with-15-31141.wav</ShortName>
 					<Path>SFX\crt-monitor-power-on-with-15-31141_791179E0.wem</Path>
 				</File>
+				<File Id="773718132" Language="SFX">
+					<ShortName>wind-turbine-blades-34566.wav</ShortName>
+					<Path>SFX\wind-turbine-blades-34566_85C21AE7.wem</Path>
+				</File>
 				<File Id="781779642" Language="SFX">
 					<ShortName>the-country-sound-of-new-milks-in-high-peak-17103.wav</ShortName>
 					<Path>SFX\the-country-sound-of-new-milks-in-high-peak-17103_B8393081.wem</Path>
@@ -101,7 +117,7 @@
 				</File>
 				<File Id="857142918" Language="SFX">
 					<ShortName>indoor_-apartments_hall_noise-6840.wav</ShortName>
-					<Path>SFX\indoor_-apartments_hall_noise-6840_85C21AE7.wem</Path>
+					<Path>SFX\indoor_-apartments_hall_noise-6840_8E4057E7.wem</Path>
 				</File>
 				<File Id="878138975" Language="SFX">
 					<ShortName>knocking.wav</ShortName>

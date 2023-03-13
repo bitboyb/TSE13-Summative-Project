@@ -10,8 +10,11 @@
 				</GameParameter>
 				<GameParameter Name="Current_Time" ID="{DAFC5CE2-ECC8-4664-8B9C-E4C78B9B1141}">
 					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="3"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="3"/>
 						<Property Name="InitialValue" Type="Real64" Value="6"/>
 						<Property Name="Max" Type="Real64" Value="23"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
 					</PropertyList>
 				</GameParameter>
 				<Folder Name="Volumes" ID="{6BC0CE2E-D961-4B1F-AFC5-1008802F0E5E}" ShortID="435645750">

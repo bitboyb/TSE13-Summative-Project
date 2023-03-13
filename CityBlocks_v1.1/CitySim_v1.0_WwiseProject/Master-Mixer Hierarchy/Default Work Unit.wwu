@@ -158,7 +158,20 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<Bus Name="AB_Ambience_Master" ID="{D7024D26-3AAE-4AF7-8D57-8027B1E01235}"/>
+								<Bus Name="AB_Ambience_Master" ID="{D7024D26-3AAE-4AF7-8D57-8027B1E01235}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+											<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
 								<Bus Name="AB_Ambience_Buildings" ID="{51C73BC4-6AE1-4CDA-91DB-3EB15391B521}"/>
 								<Bus Name="AB_Ambience_Trees" ID="{C04FC4AD-3886-420B-A825-EB98055EDD44}"/>
 							</ChildrenList>
